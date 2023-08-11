@@ -42,21 +42,25 @@ window.onload = function() {
     " " +
     aleatorio(when);
 
-  // function generateExcuse(who, action, what, when, arr) {
-  //   let result =
-  //     aleatorio(who) +
-  //     " " +
-  //     aleatorio(action) +
-  //     " " +
-  //     aleatorio(what) +
-  //     " " +
-  //     aleatorio(when) +
-  //     " " +
-  //     aleatorio(arr);
+  function generateExcuse(who, action, what, when, arr) {
+    let result =
+      aleatorio(who) +
+      " " +
+      aleatorio(action) +
+      " " +
+      aleatorio(what) +
+      " " +
+      aleatorio(when) +
+      " " +
+      aleatorio(arr);
 
-  //   return result;
-  // }
-
+    return result;
+  }
+  let uno = [1, 2, 35, 56, 7];
+  let dos = [23, 545, 6565, 5656];
+  let tres = [5, 3223, 233, 3443, 2];
+  let cuatro = [4343, 32233, 4545, 4343, 3];
+  console.log(generateExcuse(uno, dos, tres, cuatro, uno));
   // write your code here
 
   // aleatorio(who);
