@@ -7,10 +7,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   const p = document.getElementById("excuse");
-  function aleatorio(arr) {
-    let aleatorioArray = Math.floor(Math.random() * arr.length);
+  function randomSelect(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
     // console.log(arr[aleatorioArray]);
-    return arr[aleatorioArray];
   }
 
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
@@ -23,44 +22,22 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  console.log(
-    aleatorio(who) +
-      " " +
-      aleatorio(action) +
-      " " +
-      aleatorio(what) +
-      " " +
-      aleatorio(when)
-  );
 
-  p.innerHTML =
-    aleatorio(who) +
-    " " +
-    aleatorio(action) +
-    " " +
-    aleatorio(what) +
-    " " +
-    aleatorio(when);
+  p.innerHTML = generateExcuse(who, action, what, when);
 
-  function generateExcuse(who, action, what, when, arr) {
+  function generateExcuse(who, action, what, when) {
     let result =
-      aleatorio(who) +
+      randomSelect(who) +
       " " +
-      aleatorio(action) +
+      randomSelect(action) +
       " " +
-      aleatorio(what) +
+      randomSelect(what) +
       " " +
-      aleatorio(when) +
-      " " +
-      aleatorio(arr);
+      randomSelect(when);
 
     return result;
   }
-  let uno = [1, 2, 35, 56, 7];
-  let dos = [23, 545, 6565, 5656];
-  let tres = [5, 3223, 233, 3443, 2];
-  let cuatro = [4343, 32233, 4545, 4343, 3];
-  console.log(generateExcuse(uno, dos, tres, cuatro, uno));
+
   // write your code here
 
   // aleatorio(who);
