@@ -7,8 +7,8 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   const p = document.getElementById("excuse");
-  function randomSelect(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+  function getRandomArray(array) {
+    return array[Math.floor(Math.random() * array.length)];
     // console.log(arr[aleatorioArray]);
   }
 
@@ -27,13 +27,13 @@ window.onload = function() {
 
   function generateExcuse(who, action, what, when) {
     let result =
-      randomSelect(who) +
+      getRandomArray(who) +
       " " +
-      randomSelect(action) +
+      getRandomArray(action) +
       " " +
-      randomSelect(what) +
+      getRandomArray(what) +
       " " +
-      randomSelect(when);
+      getRandomArray(when);
 
     return result;
   }
